@@ -37,7 +37,7 @@ with st.sidebar:
         max_value=0.0,
         value=0.0,
         step=0.1,
-        help="Negative = downslope (increases distance), Positive = upslope (no effect)",
+        help="Slope factor need only applied when greater than 1%",
     )
     avail_m = st.number_input(
         "Landing Distance Available (m)",
@@ -264,8 +264,8 @@ col2.success(f"{factored_m:.1f} m")
 
 # ─── Step X: Runway Slope Adjustment (negative = downslope) ─────────
 
-# For negative slope values, apply 20% extra distance per 1% downslope
-slope_factor = 1.0 + max(-slope_deg, 0.0) * 0.20
+# For negative slope values, apply 10% extra distance per 1% downslope
+slope_factor = 1.0 + max(-slope_deg, 0.0) * 0.10
 
 # Apply slope factor to the already factored landing distance (ft)
 sloped_ft = factored_ft * slope_factor
