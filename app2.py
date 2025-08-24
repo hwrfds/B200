@@ -251,7 +251,7 @@ col1, col2 = st.columns(2)
 col1.success(f"{factored_ft:.0f} ft")
 col2.success(f"{factored_m:.1f} m")
 
-# ─── Step X: Rollout-only Corrections (Surface & Slope) ────────────────
+# ─── Step X: Ground Roll Corrections (Wet & Slope) ────────────────
 
 # Build rollout-only slope factor:
 # - Only apply if downslope magnitude > 1%
@@ -272,7 +272,7 @@ delta_rollout_ft = wind_adj * (rollout_factor - 1.0)
 required_ft = factored_ft + delta_rollout_ft
 required_m  = required_ft * 0.3048
 
-st.markdown("### Rollout-only Corrections (Surface & Slope)")
+st.markdown("### Ground Roll Corrections (Wet & Slope)")
 r1, r2, r3, r4 = st.columns(4)
 r1.write(f"**Surface:** {surface_choice}")
 r2.write(f"**Surface factor (W):** ×{W:.2f}")
