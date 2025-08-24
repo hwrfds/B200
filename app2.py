@@ -166,8 +166,8 @@ def lookup_tbl3_interp(df, refd, ws):
 
 delta_wind = lookup_tbl3_interp(df3, weight_adj, wind)
 wind_adj   = weight_adj + delta_wind
-st.markdown("### Step 3: Wind Adjustment")
-st.success(f"After wind adjustment: **{wind_adj:.0f} ft**")
+st.markdown("### Step 3: Wind Adjustment, final ground roll")
+st.success(f"After wind adjustment, Ground Roll: **{wind_adj:.0f} ft**")
 
 # ─── Step 5: Table 4 – 50 ft Obstacle Correction (1D Interpolation) ────────
 raw4 = pd.read_csv("50ft.csv", header=None)
