@@ -4,10 +4,9 @@ import numpy as np
 
 # Landing distance factors selectable in the sidebar
 factor_options = {
-    "Standard Factor Dry (1.43)": 1.43,
-    "Standard Factor Wet (1.86)": 1.86,
-    "Approved Factor Dry (1.20)": 1.20,
-    "Approved Factor Wet (1.56)": 1.56,
+    "Standard Factor (1.43)": 1.43,
+    "Approved Factor (1.20)": 1.20,
+    
 }
 
 # ─── Page Setup ─────────────────────────────────────────────────────────────
@@ -235,7 +234,7 @@ st.success(f"Final landing distance over 50 ft obstacle: **{obs50:.0f} ft**")
 
 # ─── Additional Output: Distance in Meters ─────────────────────────────────
 obs50_m = obs50 * 0.3048
-st.markdown("### Final Landing Distance in Meters")
+st.markdown("### Landing Distance in Meters 50 ft")
 st.success(f"{obs50_m:.1f} m")
 
 # ─── Step 6: Apply a Factor ───────────────────────────────────
