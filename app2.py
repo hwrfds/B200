@@ -280,7 +280,7 @@ r4.write(f"**Slope factor (S):** ×{S:.2f}")
 
 c1, c2 = st.columns(2)
 c1.success(f"GroundRoll Δ: **{delta_rollout_ft:.0f} ft**")
-c2.success(f"Final Required: **{required_ft:.0f} ft** / **{required_m:.1f} m**")
+c2.success(f"Final Landing Distance Required: **{required_ft:.0f} ft** / **{required_m:.1f} m**")
 
 # ─── Step Y: Landing Distance Available & Go/No-Go ─────────────────────────
 
