@@ -297,7 +297,7 @@ c2.write(f"**{avail_ft:.0f} ft**")
 has_tailwind = wind < 0
 
 # Check if the 1.20 factor is selected
-using_1_2_factor = factor_label == "Approved Factor Dry (1.20)"
+using_1_2_factor = factor_label == "Approved Factor (1.20)"
 
 # Go/No-Go Decision Logic
 st.markdown("### Go/No-Go Decision")
